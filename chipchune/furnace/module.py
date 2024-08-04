@@ -95,7 +95,7 @@ class FurnaceModule:
         """
         self.wavetables: List[FurnaceWavetable] = []
 
-        self.samples: List[FurnaceWavetable] = []
+        self.samples: List[FurnaceSample] = []
 
         if isinstance(file_name_or_stream, BufferedReader):
             self.load_from_stream(file_name_or_stream)
