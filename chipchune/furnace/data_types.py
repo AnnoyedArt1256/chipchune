@@ -736,6 +736,7 @@ class WavetableMeta:
 class SampleMeta:
     name: str = ""
     length: int = 0
+    sample_rate: int = 0
     bitdepth: int = 0
     loop_start: int = 0
     loop_end: int = 0
