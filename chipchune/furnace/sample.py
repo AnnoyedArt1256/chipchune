@@ -36,7 +36,7 @@ class FurnaceSample:
         self.meta.name = read_str(smp_data)
         self.meta.length = read_int(smp_data)
         read_int(smp_data)  # compatablity rate
-        self.sample_rate = read_int(smp_data)
+        self.meta.sample_rate = read_int(smp_data)
         self.meta.depth = int(smp_data.read(1)[0])
         smp_data.read(1)  # loop direction
         smp_data.read(1)  # flags
