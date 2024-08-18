@@ -514,12 +514,12 @@ class FurnaceInstrument:
         data = [read_byte(stream) for _ in range(4)]
 
         current = data.pop(0)
-        sn.envelope.d = (current >> 4) & 0b1111
+        sn.envelope.d = (current >> 4) & 0b111
         sn.envelope.a = current & 0b1111
 
         current = data.pop(0)
-        sn.envelope.s = (current >> 4) & 0b1111
-        sn.envelope.r = current & 0b1111
+        sn.envelope.s = (current >> 5) & 0b111
+        sn.envelope.r = current & 0b11111
 
         current = data.pop(0)
         sn.use_env = bool((current >> 4) & 1)
